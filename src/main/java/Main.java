@@ -10,7 +10,7 @@ public class Main extends Application
 	public void start(Stage stage) throws Exception
 	{
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("views/MainView.fxml"));
+		loader.setLocation(Main.class.getResource("views/LoginView.fxml")); // we can change this later if need be
 
 		AnchorPane view = loader.load();
 		
