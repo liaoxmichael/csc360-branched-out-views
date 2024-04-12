@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <BorderPane maxHeight="700.0" maxWidth="1200.0" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1200.0">
@@ -29,7 +28,7 @@
                <children>
                   <HBox maxWidth="1200.0" GridPane.vgrow="ALWAYS">
                      <children>
-                        <Button minHeight="100.0" minWidth="100.0" mnemonicParsing="false" text="Logo">
+                        <Button minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#onClickBack" text="Logo">
                            <HBox.margin>
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </HBox.margin>

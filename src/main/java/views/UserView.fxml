@@ -15,14 +15,13 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
 <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <VBox prefHeight="200.0">
          <children>
             <StackPane alignment="TOP_LEFT">
                <children>
-                  <Button mnemonicParsing="false" text="Edit">
+                  <Button mnemonicParsing="false" onAction="#onClickBack" text="Edit">
                      <StackPane.margin>
                         <Insets />
                      </StackPane.margin>
