@@ -2,13 +2,13 @@ package models;
 
 import javafx.beans.property.SimpleStringProperty;
 
-public abstract class PostModel extends EntityModel
+public abstract class Post extends Entity
 {
 	
 	SimpleStringProperty title;
 	SimpleStringProperty description;
 	
-	public PostModel(int id, String title)
+	public Post(int id, String title)
 	{
 		super(id);
 		this.title = new SimpleStringProperty();

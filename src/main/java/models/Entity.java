@@ -5,14 +5,14 @@ import javafx.beans.property.SimpleMapProperty;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 
-public abstract class EntityModel
+public abstract class Entity
 {
 	int id;
-	PageModel page;
+	Page page;
 	ObservableMap<String, ObservableList<Link>> links;
 	ObservableList<String> externalWebLinks;
 	
-	public EntityModel(int id)
+	public Entity(int id)
 	{
 		this.id = id;
 		links = new SimpleMapProperty<String, ObservableList<Link>>();
@@ -22,7 +22,7 @@ public abstract class EntityModel
 	/**
 	 * @return the page
 	 */
-	public PageModel getPage()
+	public Page getPage()
 	{
 		return page;
 	}
@@ -30,7 +30,7 @@ public abstract class EntityModel
 	/**
 	 * @param page the page to set
 	 */
-	public void setPage(PageModel page)
+	public void setPage(Page page)
 	{
 		this.page = page;
 	}

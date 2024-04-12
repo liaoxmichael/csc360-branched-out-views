@@ -9,9 +9,9 @@ public class SkillProficiency
 	}
 
 	ProficiencyLevel level;
-	SkillModel skill;
+	Skill skill;
 	
-	public SkillProficiency(SkillModel skill, ProficiencyLevel level)
+	public SkillProficiency(Skill skill, ProficiencyLevel level)
 	{
 		this.skill = skill;
 		this.level = level;
@@ -36,7 +36,7 @@ public class SkillProficiency
 	/**
 	 * @return the skill
 	 */
-	public SkillModel getSkill()
+	public Skill getSkill()
 	{
 		return skill;
 	}
@@ -44,7 +44,7 @@ public class SkillProficiency
 	/**
 	 * @param skill the skill to set
 	 */
-	public void setSkill(SkillModel skill)
+	public void setSkill(Skill skill)
 	{
 		this.skill = skill;
 	}

@@ -2,7 +2,7 @@ package models;
 
 import javafx.beans.property.SimpleStringProperty;
 
-public abstract class UserModel extends EntityModel
+public abstract class User extends Entity
 {
 	
 	SimpleStringProperty name;
@@ -12,7 +12,7 @@ public abstract class UserModel extends EntityModel
 	SimpleStringProperty avatarURL;
 	SimpleStringProperty bannerURL;
 	
-	public UserModel(int id, String name, String email)
+	public User(int id, String name, String email)
 	{
 		super(id);
 		this.name = new SimpleStringProperty();
