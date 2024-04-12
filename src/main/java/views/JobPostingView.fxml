@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -12,254 +14,201 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="700.0" maxWidth="1200.0" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <GridPane maxWidth="1200.0" prefWidth="1200.0" BorderPane.alignment="TOP_LEFT">
-        <columnConstraints>
-          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" />
-          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" valignment="TOP" vgrow="ALWAYS" />
-        </rowConstraints>
-         <children>
-            <HBox maxWidth="1200.0" GridPane.vgrow="ALWAYS">
+<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <BorderPane maxHeight="700.0" maxWidth="1200.0" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1200.0">
+         <top>
+            <GridPane maxWidth="1200.0" prefWidth="1200.0" BorderPane.alignment="TOP_LEFT">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" valignment="TOP" vgrow="ALWAYS" />
+              </rowConstraints>
                <children>
-                  <Button minHeight="100.0" minWidth="100.0" mnemonicParsing="false" text="Logo">
-                     <HBox.margin>
+                  <HBox maxWidth="1200.0" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <Button minHeight="100.0" minWidth="100.0" mnemonicParsing="false" text="Logo">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <VBox>
+                           <children>
+                              <Label text="Job Title" wrapText="true">
+                                 <font>
+                                    <Font size="48.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" text="(">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" text="Job Type" wrapText="true">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" text=")">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" text="Recommend Job">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" GridPane.columnIndex="1">
+                     <GridPane.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </HBox.margin>
-                  </Button>
+                     </GridPane.margin>
+                     <children>
+                        <Button minWidth="40.0" mnemonicParsing="false" text="Edit" wrapText="true" HBox.hgrow="SOMETIMES" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </top>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Company Name">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Label text="Location">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="(">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="97.0" layoutY="10.0" text="Job Site">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="153.0" layoutY="10.0" text=")">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Number of applicants:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="#">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Date Posted:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="Date">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
                   <VBox>
                      <children>
-                        <Label text="Job Title" wrapText="true">
+                        <Label alignment="BOTTOM_LEFT" text="Job Description">
                            <font>
-                              <Font size="48.0" />
+                              <Font size="36.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
                         </Label>
-                        <HBox>
-                           <children>
-                              <Label alignment="BOTTOM_LEFT" text="(">
-                                 <font>
-                                    <Font size="36.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" left="20.0" />
-                                 </padding>
-                              </Label>
-                              <Label alignment="BOTTOM_LEFT" text="Job Type" wrapText="true">
-                                 <font>
-                                    <Font size="36.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" />
-                                 </padding>
-                              </Label>
-                              <Label alignment="BOTTOM_LEFT" text=")">
-                                 <font>
-                                    <Font size="36.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="10.0" />
-                                 </padding>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <Button mnemonicParsing="false" text="Recommend Job">
-                           <VBox.margin>
-                              <Insets left="30.0" />
-                           </VBox.margin>
-                        </Button>
+                        <Label text="Description">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
                   </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_RIGHT" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </GridPane.margin>
-               <children>
-                  <Button minWidth="40.0" mnemonicParsing="false" text="Edit" wrapText="true" HBox.hgrow="SOMETIMES" />
-               </children>
-            </HBox>
-         </children>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
-      </GridPane>
-   </top>
-   <center>
-      <VBox BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Company Name">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <HBox>
-               <children>
-                  <Label text="Location">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label text="(">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-                  <Label layoutX="97.0" layoutY="10.0" text="Job Site">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="153.0" layoutY="10.0" text=")">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox>
-               <children>
-                  <Label text="Number of applicants:">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="10.0" layoutY="10.0" text="#">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox>
-               <children>
-                  <Label text="Date Posted:">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="10.0" layoutY="10.0" text="Date">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-               </children>
-            </HBox>
-            <VBox>
-               <children>
-                  <Label alignment="BOTTOM_LEFT" text="Job Description">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
-                  </Label>
-                  <Label text="Description">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-            </VBox>
-            <VBox>
-               <children>
-                  <Label alignment="BOTTOM_LEFT" text="Skills Required">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
-                  </Label>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
+                  <VBox>
                      <children>
-                        <HBox>
-                           <children>
-                              <Label text="- ">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="10.0" layoutY="10.0" text="Skill 1">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="21.0" layoutY="10.0" text=": ">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="77.0" layoutY="10.0" text="Level">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox layoutX="20.0" layoutY="10.0">
-                           <children>
-                              <Label text="- ">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="10.0" layoutY="10.0" text="Skill 2">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="21.0" layoutY="10.0" text=": ">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="77.0" layoutY="10.0" text="Level">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
+                        <Label alignment="BOTTOM_LEFT" text="Skills Required">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <ListView prefHeight="200.0" prefWidth="200.0" />
                      </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
                   </VBox>
                </children>
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
             </VBox>
-         </children>
-         <BorderPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </BorderPane.margin>
-      </VBox>
-   </center>
-</BorderPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>
