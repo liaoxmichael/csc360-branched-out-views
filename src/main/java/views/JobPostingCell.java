@@ -6,8 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import models.BranchedOutModel;
 import models.TestJobPostingModel;
 import models.TransitionalViewModel;
 
@@ -27,24 +25,25 @@ public class JobPostingCell extends ListCell<TestJobPostingModel>
 		this.model = model;
 
 		controller = loader.getController();
-		controller.setModels(job, model);
+		
+		setText(null);
 	}
 	
 	@Override
 	protected void updateItem(TestJobPostingModel item, boolean empty) 
 	{
-		super.updateItem(item, empty);
+		job = item;
 		
 		if (empty || item == null)
 		{
 			setGraphic(null);
-			setText(null);
 		}
 		else 
 		{
 			controller.setModels(item, model);
-			controller.loadData();
+			setGraphic(view);
 		}
+		super.updateItem(item, empty);
 	}
 	
 }

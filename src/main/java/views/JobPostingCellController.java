@@ -5,7 +5,6 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import models.BranchedOutModel;
 import models.TestJobPostingModel;
 import models.TransitionalViewModel;
 
@@ -24,6 +23,7 @@ public class JobPostingCellController
 	{
 		this.tvm = tvm;
 		model = newModel;
+		loadData();
 	}
 
     @FXML

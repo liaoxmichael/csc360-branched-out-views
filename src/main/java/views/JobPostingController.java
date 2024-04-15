@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import models.BranchedOutModel;
 import models.TestJobPostingModel;
 import models.TransitionalViewModel;
 
@@ -26,7 +25,7 @@ public class JobPostingController
     private Label desc;
 
     @FXML
-    private Label location;
+    private Label locationName;
 
     @FXML
     private Label numApplicants;
@@ -46,8 +45,10 @@ public class JobPostingController
 
 	public void setModels(TestJobPostingModel newModel, TransitionalViewModel tvm)
 	{
+		System.out.println(newModel.locationName);
 		this.tvm = tvm;
 		model = newModel;
+		loadData();
 	}
 
 	@FXML
@@ -62,7 +63,8 @@ public class JobPostingController
 		companyName.setText(model.company);
 		datePosted.setText(model.datePosted);
 		desc.setText(model.desc);
-		location.setText(model.location);
+		System.out.println(model.locationName);
+		locationName.setText(model.locationName);
 		site.setText(model.site);
 		numApplicants.setText(String.valueOf(model.numApplicants));
 		type.setText(model.type);

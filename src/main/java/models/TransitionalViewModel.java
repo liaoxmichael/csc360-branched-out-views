@@ -50,7 +50,6 @@ public class TransitionalViewModel
 		SearchDisplayController controller = loader.getController();
 		mainview.setCenter(view);
 		controller.setModels(model, this);
-		controller.loadData(); // TODO
 
 	}
 
@@ -93,7 +92,6 @@ public class TransitionalViewModel
 		JobPostingController controller = loader.getController();
 		mainview.setCenter(view);
 		controller.setModels(job, this);
-		controller.loadData(); // TODO
 
 	}
 

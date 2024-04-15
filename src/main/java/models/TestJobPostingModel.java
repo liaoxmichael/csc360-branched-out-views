@@ -9,7 +9,7 @@ public class TestJobPostingModel
 	public String type;
 	public String desc;
 	public String company;
-	public String location;
+	public String locationName;
 	public String site;
 	public int numApplicants;
 	public String datePosted;
@@ -24,7 +24,7 @@ public class TestJobPostingModel
 		this.type = type;
 		this.desc = desc;
 		this.company = company;
-		this.location = location;
+		this.locationName = location;
 		this.site = site;
 		this.numApplicants = numApplicants;
 		this.datePosted = datePosted;
@@ -40,4 +40,14 @@ public class TestJobPostingModel
 	public int getID() {
 		return this.id;
 	}
+
+	@Override
+	public String toString()
+	{
+		return "TestJobPostingModel [id=" + id + ", title=" + title + ", type=" + type + ", desc=" + desc + ", company="
+				+ company + ", location=" + locationName + ", site=" + site + ", numApplicants=" + numApplicants
+				+ ", datePosted=" + datePosted + ", skillsRequired=" + skillsRequired + "]";
+	}
+	
+	
 }

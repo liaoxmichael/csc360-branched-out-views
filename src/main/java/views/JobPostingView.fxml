@@ -107,7 +107,7 @@
                   </Label>
                   <HBox>
                      <children>
-                        <Label fx:id="location" text="Location">
+                        <Label fx:id="locationName" text="Location">
                            <font>
                               <Font size="24.0" />
                            </font>
