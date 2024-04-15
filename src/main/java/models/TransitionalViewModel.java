@@ -6,7 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import views.JobPostingController;
 import views.MainController;
+import views.SearchDisplayController;
 import views.SkillController;
 import views.UserController;
 
@@ -20,8 +22,9 @@ public class TransitionalViewModel
 		mainview = view;
 		this.model = model;
 	}
-	
-	public void showMain() throws IOException {
+
+	public void showMain() throws IOException
+	{
 		// set mainview to dashboard
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(TransitionalViewModel.class.getResource("../views/MainView.fxml"));
@@ -31,16 +34,28 @@ public class TransitionalViewModel
 		MainController controller = loader.getController();
 		mainview.setTop(null);
 		mainview.setCenter(view);
-		mainview = (BorderPane) view; // reset mainview to take perspective of actual Main (w/ nav bar) instead of LoginView
+		mainview = (BorderPane) view; // reset mainview to take perspective of actual Main (w/ nav bar) instead of
+										// LoginView
 		controller.setModels(model, this);
 	}
-	
-	public void showSearchDisplay() {
-		//set center to display list of job postings
-		
+
+	public void showSearchDisplay() throws IOException
+	{
+		// set center to display list of job postings
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(TransitionalViewModel.class.getResource("../views/UserView.fxml"));
+
+		ScrollPane view = loader.load();
+
+		SearchDisplayController controller = loader.getController();
+		mainview.setCenter(view);
+		controller.setModels(model, this);
+		controller.loadData(); // TODO
+
 	}
-	
-	public void showProfile() throws IOException {
+
+	public void showProfile() throws IOException
+	{
 		// set center to user profile
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(TransitionalViewModel.class.getResource("../views/UserView.fxml"));
@@ -50,9 +65,11 @@ public class TransitionalViewModel
 		UserController controller = loader.getController();
 		mainview.setCenter(view);
 		controller.setModels(model, this);
+		controller.loadData();
 	}
-	
-	public void showSkill() throws IOException {
+
+	public void showSkill() throws IOException
+	{
 		// show skill page from user profile
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(TransitionalViewModel.class.getResource("../views/SkillView.fxml"));
@@ -62,16 +79,22 @@ public class TransitionalViewModel
 		SkillController controller = loader.getController();
 		mainview.setCenter(view);
 		controller.setModels(model, this);
-	}
-	
-	public void onClickJob() {
-		// 
+		controller.loadData(); // TODO
 	}
 
 	public void showJobPosting()
 	{
 		// TODO takes us from display job postings to job posting page
-		
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(TransitionalViewModel.class.getResource("../views/SkillView.fxml"));
+
+		ScrollPane view = loader.load();
+
+		JobPostingController controller = loader.getController();
+		mainview.setCenter(view);
+		controller.setModels(model, this);
+		controller.loadData(); // TODO
+
 	}
 
 }

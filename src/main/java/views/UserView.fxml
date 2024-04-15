@@ -21,7 +21,7 @@
          <children>
             <StackPane alignment="TOP_LEFT">
                <children>
-                  <Button mnemonicParsing="false" text="Edit">
+                  <Button fx:id="editProfileBtn" mnemonicParsing="false" text="Edit">
                      <StackPane.margin>
                         <Insets />
                      </StackPane.margin>
@@ -50,12 +50,12 @@
                <children>
                   <HBox>
                      <children>
-                        <Label text="Name">
+                        <Label fx:id="name" text="Name">
                            <font>
                               <Font size="64.0" />
                            </font>
                         </Label>
-                        <Label text="(pro/nouns)">
+                        <Label fx:id="pronouns" text="(pro/nouns)">
                            <font>
                               <Font size="36.0" />
                            </font>
@@ -72,7 +72,7 @@
                      <children>
                         <HBox>
                            <children>
-                              <Label text="#">
+                              <Label fx:id="numFollowers" text="#">
                                  <font>
                                     <Font size="36.0" />
                                  </font>
@@ -86,7 +86,7 @@
                         </HBox>
                         <HBox layoutX="10.0" layoutY="10.0">
                            <children>
-                              <Label text="#">
+                              <Label fx:id="numFollowing" text="#">
                                  <font>
                                     <Font size="36.0" />
                                  </font>
@@ -103,7 +103,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </VBox>
-                  <Label text="Bio" GridPane.rowIndex="1">
+                  <Label fx:id="bio" text="Bio" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -119,8 +119,8 @@
                               <Font size="36.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" text="Add" />
-                        <Button mnemonicParsing="false" text="Edit" />
+                        <Button fx:id="addExperienceBtn" mnemonicParsing="false" text="Add" />
+                        <Button fx:id="editExperienceBtn" mnemonicParsing="false" text="Edit" />
                      </children>
                      <VBox.margin>
                         <Insets top="20.0" />
@@ -138,8 +138,8 @@
                               <Font size="36.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" text="Add" />
-                        <Button mnemonicParsing="false" text="Edit" />
+                        <Button fx:id="addSkillBtn" mnemonicParsing="false" text="Add" />
+                        <Button fx:id="editSkillBtn" mnemonicParsing="false" text="Edit" />
                      </children>
                      <VBox.margin>
                         <Insets top="20.0" />

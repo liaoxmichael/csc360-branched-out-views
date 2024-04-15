@@ -2,63 +2,49 @@ package models;
 
 import java.util.ArrayList;
 
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 public class TestPersonModel
 {
-	SimpleStringProperty name;
-	SimpleStringProperty bio;
-	SimpleStringProperty email;
-	SimpleStringProperty pronouns;
+	public String name;
+	public String bio;
+	public String email;
+	public String pronouns;
 
-	ArrayList<String> skills;
-	ArrayList<String> jobs;
-	ArrayList<String> communities;
-	
-	SimpleIntegerProperty numFollowers;
-	SimpleIntegerProperty numFollowing;
+	public ArrayList<String> skills;
+	public ArrayList<String> jobs;
+	public ArrayList<String> communities;
+
+	public int numFollowers;
+	public int numFollowing;
 
 	public TestPersonModel()
 	{
-		name = new SimpleStringProperty();
-		name.set("Michael Keith Bradshaw");
-		
-		bio = new SimpleStringProperty();
-		bio.set("I love to teach :)");
-		
-		email = new SimpleStringProperty();
-		email.set("michael.bradshaw@centre.edu");
-		
-		pronouns = new SimpleStringProperty();
-		pronouns.set("he/him");
-		
-		skills = new ArrayList<String>();
+		name = "Michael Keith Bradshaw";
+		bio = "I love to teach :)";
+		email = "michael.bradshaw@centre.edu";
+		pronouns = "he/him";
+
+		skills = new ArrayList<>();
 		skills.add("Python");
 		skills.add("Java");
-		jobs = new ArrayList<String>();
+
+		jobs = new ArrayList<>();
 		jobs.add("Centre College Professor");
 		jobs.add("Arcane Architect Developer");
-		communities = new ArrayList<String>();
+
+		communities = new ArrayList<>();
 		communities.add("Professor Support Group");
 		communities.add("Video Game Designers Unite!");
-		
-		numFollowers = new SimpleIntegerProperty();
-		numFollowers.set(12382893);
-		
-		numFollowing = new SimpleIntegerProperty();
-		numFollowing.set(22);
+
+		numFollowers = 12382893;
+		numFollowing = 22;
 	}
 
 	@Override
 	public String toString()
 	{
-		return name + "(" + pronouns + ")\n" + bio
-				+ ", skills=" + skills + ", jobs=" + jobs + ", communities=" + communities + ", numFollowers="
-				+ numFollowers + ", numFollowing=" + numFollowing + "]";
+		return name + "(" + pronouns + ")\n" + bio + ", skills=" + skills + ", jobs=" + jobs + ", communities="
+				+ communities + ", numFollowers=" + numFollowers + ", numFollowing=" + numFollowing + "]";
 	}
-	
-	
 
 //	public String getName()
 //	{

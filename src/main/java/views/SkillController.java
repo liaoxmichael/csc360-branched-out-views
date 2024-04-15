@@ -1,6 +1,5 @@
 package views;
 
-import javafx.fxml.FXML;
 import models.BranchedOutModel;
 import models.TransitionalViewModel;
 

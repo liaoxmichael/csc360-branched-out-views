@@ -2,20 +2,22 @@ package views;
 
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
+import models.BranchedOutModel;
 import models.TransitionalViewModel;
 
 public class SearchDisplayController
 {
-	
-	TransitionalViewModel model;
+	TransitionalViewModel tvm;
+	BranchedOutModel model;
 
-	public void setModel(TransitionalViewModel newModel)
+	public void setModels(BranchedOutModel newModel, TransitionalViewModel tvm)
 	{
+		this.tvm = tvm;
 		model = newModel;
 	}
 	
 	@FXML
     void onClickJob(MouseEvent event) {
-		model.showJobPosting();
+		tvm.showJobPosting();
     }
 }

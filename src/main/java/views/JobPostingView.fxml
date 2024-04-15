@@ -35,7 +35,7 @@
                         </Button>
                         <VBox>
                            <children>
-                              <Label text="Job Title" wrapText="true">
+                              <Label fx:id="title" text="Job Title" wrapText="true">
                                  <font>
                                     <Font size="48.0" />
                                  </font>
@@ -53,7 +53,7 @@
                                           <Insets bottom="10.0" left="20.0" />
                                        </padding>
                                     </Label>
-                                    <Label alignment="BOTTOM_LEFT" text="Job Type" wrapText="true">
+                                    <Label fx:id="type" alignment="BOTTOM_LEFT" text="Job Type" wrapText="true">
                                        <font>
                                           <Font size="36.0" />
                                        </font>
@@ -71,7 +71,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" text="Recommend Job">
+                              <Button fx:id="recommendJobBtn" mnemonicParsing="false" text="Recommend Job">
                                  <VBox.margin>
                                     <Insets left="30.0" />
                                  </VBox.margin>
@@ -97,7 +97,7 @@
          <center>
             <VBox BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Company Name">
+                  <Label fx:id="companyName" text="Company Name">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -107,7 +107,7 @@
                   </Label>
                   <HBox>
                      <children>
-                        <Label text="Location">
+                        <Label fx:id="location" text="Location">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -120,7 +120,7 @@
                               <Insets left="10.0" />
                            </padding>
                         </Label>
-                        <Label layoutX="97.0" layoutY="10.0" text="Job Site">
+                        <Label fx:id="site" layoutX="97.0" layoutY="10.0" text="Job Site">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -139,7 +139,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="10.0" layoutY="10.0" text="#">
+                        <Label fx:id="numApplicants" layoutX="10.0" layoutY="10.0" text="#">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -156,7 +156,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="10.0" layoutY="10.0" text="Date">
+                        <Label fx:id="datePosted" layoutX="10.0" layoutY="10.0" text="Date">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -176,7 +176,7 @@
                               <Insets bottom="10.0" />
                            </padding>
                         </Label>
-                        <Label text="Description">
+                        <Label fx:id="desc" text="Description">
                            <font>
                               <Font size="24.0" />
                            </font>

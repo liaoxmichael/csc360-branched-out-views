@@ -4,22 +4,25 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import models.BranchedOutModel;
 import models.TransitionalViewModel;
 
 public class JobPostingController
 {
 
-	TransitionalViewModel model;
+	TransitionalViewModel tvm;
+	BranchedOutModel model;
 
-	public void setModel(TransitionalViewModel newModel)
+	public void setModels(BranchedOutModel newModel, TransitionalViewModel tvm)
 	{
+		this.tvm = tvm;
 		model = newModel;
 	}
 
 	@FXML
 	void onClickBack(ActionEvent event) throws IOException
 	{
-		model.showSearchDisplay();
+		tvm.showSearchDisplay();
 	}
 
 }
