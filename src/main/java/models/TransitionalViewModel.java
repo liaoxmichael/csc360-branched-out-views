@@ -43,7 +43,7 @@ public class TransitionalViewModel
 	{
 		// set center to display list of job postings
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(TransitionalViewModel.class.getResource("../views/UserView.fxml"));
+		loader.setLocation(TransitionalViewModel.class.getResource("../views/SearchDisplayView.fxml"));
 
 		ScrollPane view = loader.load();
 
@@ -79,20 +79,20 @@ public class TransitionalViewModel
 		SkillController controller = loader.getController();
 		mainview.setCenter(view);
 		controller.setModels(model, this);
-		controller.loadData(); // TODO
+		//controller.loadData(); // TODO
 	}
 
-	public void showJobPosting()
+	public void showJobPosting(TestJobPostingModel job) throws IOException
 	{
 		// TODO takes us from display job postings to job posting page
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(TransitionalViewModel.class.getResource("../views/SkillView.fxml"));
+		loader.setLocation(TransitionalViewModel.class.getResource("../views/JobPostingView.fxml"));
 
 		ScrollPane view = loader.load();
 
 		JobPostingController controller = loader.getController();
 		mainview.setCenter(view);
-		controller.setModels(model, this);
+		controller.setModels(job, this);
 		controller.loadData(); // TODO
 
 	}

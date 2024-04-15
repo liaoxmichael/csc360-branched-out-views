@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public class TestJobPostingModel
 {
+	public int id;
 	public String title;
+	public String type;
 	public String desc;
 	public String company;
 	public String location;
@@ -14,10 +16,12 @@ public class TestJobPostingModel
 
 	public ArrayList<String> skillsRequired;
 
-	public TestJobPostingModel(String title, String desc, String company, String location, String site,
+	public TestJobPostingModel(int id, String title, String type, String desc, String company, String location, String site,
 			int numApplicants, String datePosted, String... skills)
 	{
+		this.id = id;
 		this.title = title;
+		this.type = type;
 		this.desc = desc;
 		this.company = company;
 		this.location = location;
@@ -30,5 +34,10 @@ public class TestJobPostingModel
 		{
 			skillsRequired.add(s);
 		}
+		
+	}
+	
+	public int getID() {
+		return this.id;
 	}
 }
