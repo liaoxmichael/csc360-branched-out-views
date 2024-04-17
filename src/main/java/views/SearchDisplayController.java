@@ -42,7 +42,7 @@ public class SearchDisplayController
 	void onClickJob() throws IOException
 	{
 		TestJobPostingModel model = jobView.getSelectionModel().getSelectedItem();
-		System.out.println(model);
+//		System.out.println(model);
 		tvm.showJobPosting(model);
 	}
 

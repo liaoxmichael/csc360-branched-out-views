@@ -63,7 +63,7 @@ public class JobPostingController
 		companyName.setText(model.company);
 		datePosted.setText(model.datePosted);
 		desc.setText(model.desc);
-		System.out.println(model.locationName);
+//		System.out.println(model.locationName);
 		locationName.setText(model.locationName);
 		site.setText(model.site);
 		numApplicants.setText(String.valueOf(model.numApplicants));
