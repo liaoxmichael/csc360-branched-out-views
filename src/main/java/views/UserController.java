@@ -3,6 +3,7 @@ package views;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import models.BranchedOutModel;
 import models.TransitionalViewModel;
 
@@ -40,6 +41,15 @@ public class UserController
 
 	@FXML
 	private Label pronouns;
+	
+	@FXML
+	private ListView<String> skillsList;
+	
+	@FXML
+	private ListView<String> jobsList;
+	
+	@FXML
+	private ListView<String> communitiesList;
 
 	public void setModels(BranchedOutModel newModel, TransitionalViewModel tvm)
 	{
@@ -53,5 +63,10 @@ public class UserController
 		pronouns.setText("(" + model.drB.pronouns + ")");
 		numFollowers.setText(String.valueOf(model.drB.numFollowers));
 		numFollowing.setText(String.valueOf(model.drB.numFollowing));
+		
+		skillsList.setItems(model.drB.getSkills());
+		System.out.println(model.drB.getSkills());
+		jobsList.setItems(model.drB.getJobs());
+		communitiesList.setItems(model.drB.getCommunities());
 	}
 }

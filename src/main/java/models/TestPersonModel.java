@@ -2,8 +2,13 @@ package models;
 
 import java.util.ArrayList;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class TestPersonModel
 {
+	// TODO add example work experiences etc
+	
 	public String name;
 	public String bio;
 	public String email;
@@ -23,20 +28,32 @@ public class TestPersonModel
 		email = "michael.bradshaw@centre.edu";
 		pronouns = "he/him";
 
-		skills = new ArrayList<>();
+		skills = new ArrayList<String>();
 		skills.add("Python");
 		skills.add("Java");
 
-		jobs = new ArrayList<>();
+		jobs = new ArrayList<String>();
 		jobs.add("Centre College Professor");
 		jobs.add("Arcane Architect Developer");
 
-		communities = new ArrayList<>();
+		communities = new ArrayList<String>();
 		communities.add("Professor Support Group");
 		communities.add("Video Game Designers Unite!");
 
 		numFollowers = 12382893;
 		numFollowing = 22;
+	}
+	
+	public ObservableList<String> getSkills() {
+		return FXCollections.observableArrayList(skills);
+	}
+	
+	public ObservableList<String> getJobs() {
+		return FXCollections.observableArrayList(jobs);
+	}
+	
+	public ObservableList<String> getCommunities() {
+		return FXCollections.observableArrayList(communities);
 	}
 
 	@Override
